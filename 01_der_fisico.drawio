@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="der_fisico" name="DER físico">
+    <mxGraphModel dx="1470" dy="921" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1470" pageHeight="921" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_der" parent="1" value="Modelo físico do banco de estatísticas esportivas" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=29;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="20" width="1300" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle_der" parent="1" value="9 tabelas · 49 atributos · 11 chaves estrangeiras" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=17;fontColor=#435B69;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="63" width="1300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="organiza 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.48254;exitY=1.00000;entryX=0.48254;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_liga" target="t_edicao">
+          <mxGeometry relative="1" x="-0.0082645" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="recebe 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=1.00000;exitY=0.27097;entryX=0.00000;entryY=0.48837;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_edicao" target="t_inscricao">
+          <mxGeometry relative="1" x="0.0059880" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="disputa 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.50159;exitY=1.00000;entryX=0.50159;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_clube" target="t_inscricao">
+          <mxGeometry relative="1" x="0.0400000" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="assina 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.50159;exitY=1.00000;entryX=0.50159;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_atleta" target="t_vinculo">
+          <mxGeometry relative="1" x="0.0000000" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="contrata 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=1.00000;exitY=0.49032;entryX=0.00000;entryY=0.45161;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_clube" target="t_vinculo">
+          <mxGeometry relative="1" x="0.0726916" as="geometry">
+            <Array as="points">
+              <mxPoint x="981" y="184" />
+              <mxPoint x="981" y="408" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="contém 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.48254;exitY=1.00000;entryX=0.00000;entryY=0.17413;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_edicao" target="t_partida">
+          <mxGeometry relative="1" x="-0.2000000" as="geometry">
+            <Array as="points">
+              <mxPoint x="188" y="530" />
+              <mxPoint x="460" y="530" />
+              <mxPoint x="460" y="603" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="mandante 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.26349;exitY=1.00000;entryX=0.26349;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_inscricao" target="t_partida">
+          <mxGeometry relative="1" x="-0.0555556" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="visitante 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.74286;exitY=1.00000;entryX=0.74286;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_inscricao" target="t_partida">
+          <mxGeometry relative="1" x="-0.0555556" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="possui 1:1" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.00000;exitY=0.52239;entryX=1.00000;entryY=0.46875;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_partida" target="t_resumo">
+          <mxGeometry relative="1" x="0.0072993" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="detalha 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.48986;exitY=1.00000;entryX=0.00000;entryY=0.57589;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_resumo" target="t_estat">
+          <mxGeometry relative="1" x="-0.0168539" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="822" />
+              <mxPoint x="1053" y="822" />
+              <mxPoint x="1053" y="697" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="identifica 1:N" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.50159;exitY=1.00000;entryX=0.50159;entryY=0.00000;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_vinculo" target="t_estat">
+          <mxGeometry relative="1" x="0.0133333" as="geometry" />
+        </mxCell>
+        <mxCell id="nn_clube_edicao" value="N:N via inscricao" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=0.80000;exitY=0.00000;entryX=0.00000;entryY=0.71613;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_edicao" target="t_clube">
+          <mxGeometry relative="1" x="-0.3065903" as="geometry">
+            <Array as="points">
+              <mxPoint x="288" y="290" />
+              <mxPoint x="436" y="290" />
+              <mxPoint x="436" y="219" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nn_atleta_clube" value="N:N via vinculo" style="noEdgeStyle=1;html=1;startArrow=none;endArrow=none;strokeWidth=1.7;strokeColor=#536F83;fontColor=#172D3C;fontSize=14;fontFamily=Arial;labelBackgroundColor=#FFFFFF;exitX=1.00000;exitY=0.23871;entryX=0.00000;entryY=0.20787;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="t_clube" target="t_atleta">
+          <mxGeometry relative="1" x="-0.0035088" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="36" y="108" width="315" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga_table" parent="t_liga" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="109" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga_name" parent="t_liga" value="liga" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga_col_1" parent="t_liga" value="PK id_liga : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga_col_2" parent="t_liga" value="UK nome : VARCHAR(100)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_liga_col_3" parent="t_liga" value="pais : VARCHAR(60)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="36" y="338" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_table" parent="t_edicao" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_name" parent="t_edicao" value="edicao" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_col_1" parent="t_edicao" value="PK id_edicao : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_col_2" parent="t_edicao" value="FK id_liga : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_col_3" parent="t_edicao" value="ano : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_col_4" parent="t_edicao" value="data_inicio : DATE" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_edicao_col_5" parent="t_edicao" value="data_fim : DATE" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="518" y="108" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_table" parent="t_clube" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_name" parent="t_clube" value="clube" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_col_1" parent="t_clube" value="PK id_clube : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_col_2" parent="t_clube" value="UK nome : VARCHAR(100)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_col_3" parent="t_clube" value="UK sigla : CHAR(3)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_col_4" parent="t_clube" value="cidade : VARCHAR(80)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_clube_col_5" parent="t_clube" value="fundacao : DATE" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inscricao" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="518" y="338" width="315" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inscricao_table" parent="t_inscricao" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inscricao_name" parent="t_inscricao" value="inscricao" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inscricao_col_1" parent="t_inscricao" value="PK,FK id_edicao : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_inscricao_col_2" parent="t_inscricao" value="PK,FK id_clube : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="1118" y="108" width="315" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_table" parent="t_atleta" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_name" parent="t_atleta" value="atleta" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_1" parent="t_atleta" value="PK id_atleta : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_2" parent="t_atleta" value="nome : VARCHAR(120)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_3" parent="t_atleta" value="data_nascimento : DATE" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_4" parent="t_atleta" value="nacionalidade : VARCHAR(60)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_5" parent="t_atleta" value="posicao : VARCHAR(3)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_atleta_col_6" parent="t_atleta" value="pe_dominante : CHAR(1)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="153" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="1118" y="338" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_table" parent="t_vinculo" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_name" parent="t_vinculo" value="vinculo" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_col_1" parent="t_vinculo" value="PK id_vinculo : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_col_2" parent="t_vinculo" value="FK id_atleta : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_col_3" parent="t_vinculo" value="FK id_clube : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_col_4" parent="t_vinculo" value="data_inicio : DATE" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_vinculo_col_5" parent="t_vinculo" value="data_fim : DATE NULL" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="518" y="568" width="315" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_table" parent="t_partida" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_name" parent="t_partida" value="partida" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_1" parent="t_partida" value="PK id_partida : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_2" parent="t_partida" value="FK id_edicao : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_3" parent="t_partida" value="FK id_mandante : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_4" parent="t_partida" value="FK id_visitante : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_5" parent="t_partida" value="data_hora : DATETIME" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_6" parent="t_partida" value="rodada : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="153" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_partida_col_7" parent="t_partida" value="status : VARCHAR(10)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="176" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="36" y="568" width="345" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_table" parent="t_resumo" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="345" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_name" parent="t_resumo" value="resumo_partida" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="345" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_1" parent="t_resumo" value="PK,FK id_partida : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_2" parent="t_resumo" value="gols_mandante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_3" parent="t_resumo" value="gols_visitante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_4" parent="t_resumo" value="chutes_mandante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_5" parent="t_resumo" value="chutes_visitante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_6" parent="t_resumo" value="no_alvo_mandante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="153" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_7" parent="t_resumo" value="no_alvo_visitante : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="176" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_resumo_col_8" parent="t_resumo" value="posse_mandante : DECIMAL(5,2)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="199" width="323" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat" parent="1" value="" style="group;html=1;recursiveResize=0;" vertex="1" connectable="1">
+          <mxGeometry x="1118" y="568" width="315" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_table" parent="t_estat" value="" style="shape=rectangle;rounded=0;html=1;fillColor=#F3F7FA;strokeColor=#AEC0CC;strokeWidth=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_name" parent="t_estat" value="estatistica_atleta" style="shape=rectangle;rounded=0;html=1;align=center;verticalAlign=middle;fillColor=#18394D;strokeColor=none;fontSize=18;fontColor=#FFFFFF;fontFamily=Arial;fontStyle=1;" vertex="1" connectable="0">
+          <mxGeometry x="0" y="0" width="315" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_1" parent="t_estat" value="PK,FK id_partida : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="38" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_2" parent="t_estat" value="PK,FK id_vinculo : INT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="61" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_3" parent="t_estat" value="minutos : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="84" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_4" parent="t_estat" value="gols : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="107" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_5" parent="t_estat" value="assistencias : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="130" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_6" parent="t_estat" value="passes_tentados : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="153" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_7" parent="t_estat" value="passes_certos : SMALLINT" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="176" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="t_estat_col_8" parent="t_estat" value="nota : DECIMAL(3,1)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=15;" vertex="1" connectable="0">
+          <mxGeometry x="11" y="199" width="293" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_1" parent="1" value="PK chave primária · FK chave estrangeira · UK chave única · NULL permite ausência de valor." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=14;fontColor=#435B69;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="848" width="1397" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_2" parent="1" value="Cada partida referencia duas inscrições: (id_edicao, id_mandante) e (id_edicao, id_visitante)." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=14;fontColor=#435B69;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="865" width="1397" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_3" parent="1" value="Os rótulos N:N indicam as tabelas associativas. A leitura inversa de 1:N é N:1." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=14;fontColor=#435B69;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="882" width="1397" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_4" parent="1" value="Partida e resumo têm relação 1:1 por chave compartilhada. O resumo é opcional." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];fontFamily=Arial;fontColor=#172D3C;fontSize=14;fontColor=#435B69;" vertex="1" connectable="0">
+          <mxGeometry x="36" y="899" width="1397" height="19" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
